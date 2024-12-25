@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "minimapSlider.activeBackground": "#ff00ff22",
+        "minimap.background": "#00000088",
+        "scrollbar.shadow": "#00000088"
+		"minimapSlider.background": "#ffffff22",
+		"minimapSlider.hoverBackground": "#ffffff22",
+		"minimapSlider.activeBackground": "#ffffff22",
+    },
+	"editor.minimap.scale": 2,
+	"editor.minimap.showSlider": "always",
+}
