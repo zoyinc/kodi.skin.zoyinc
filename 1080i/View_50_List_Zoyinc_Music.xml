@@ -188,7 +188,7 @@
 					<param name="left">535</param>
 					<param name="height">400</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">ZoyincA07$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
@@ -200,7 +200,7 @@
 					<param name="left">535</param>
 					<param name="height">400</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">ZoyincA06$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
 					<param name="subheading2_visible">[Container.content(movies) | Container.content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
@@ -213,7 +213,7 @@
 					<param name="left">535</param>
 					<param name="height">405</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">ZoyincA05$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
 					<param name="subheading2_visible">[Container.content(movies) | Container.content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
@@ -228,7 +228,7 @@
 					<param name="height">395</param>
 					<param name="plotheight">357</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">ZoyincA04$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
 					<param name="subheading2_visible">!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired))</param>
@@ -242,22 +242,31 @@
 					<param name="left">535</param>
 					<param name="height">395</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">ZoyincA03$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="footer">$VAR[panelfooter]</param>
 					<param name="visibility">Control.IsVisible(50) + !$EXP[ListPanelIsDisabled] + !$EXP[ListPanelIsSwapped] + Container.content(sets)</param>
 				</include>
 				<include content="PanelTemplate">
+					<!--
+					#
+					# This is the panel directly to the right of the CD image for Albums
+					# It has CD title, artist, track listing, genre and so on
+					#
+					-->
 					<param name="top">355</param>
 					<param name="left">535</param>
 					<param name="height">395</param>
 					<param name="subinfoheight">400</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
-					<param name="subheading">$VAR[panelsubheading]</param>
-					<param name="plot">$VAR[Plots]</param>
-					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Control.IsVisible(50) + !String.IsEqual(Skin.Font,Default no caps) + !$EXP[ListPanelIsDisabled] + !$EXP[ListPanelIsSwapped] + [Container.content(artists) | Container.content(albums)]</param>
+					<param name="heading">ZoyincB01$VAR[panelheading]</param>
+					<param name="subheading">ZoyincB02$VAR[panelsubheading]</param>
+					<param name="plot">ZoyincB03$VAR[Plots]</param>
+					<param name="footer">ZoyincB04$VAR[panelfooter]</param>
+					<!-- <param name="visibility">Control.IsVisible(50) + !String.IsEqual(Skin.Font,Default no caps) + !$EXP[ListPanelIsDisabled] + !$EXP[ListPanelIsSwapped] + [Container.content(artists) | Container.content(albums)]</param> -->
+					<!-- Disable this menu, I don't want it-->
+					<param name="visibility">false</param>
+
 				</include>
 				<include content="PanelTemplate">
 					<param name="top">355</param>
@@ -265,7 +274,7 @@
 					<param name="height">390</param>
 					<param name="subinfoheight">400</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">ZoyincA02$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
@@ -280,7 +289,7 @@
 					<param name="left">1230</param>
 					<param name="height">405</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">Zoyinc05$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
@@ -292,7 +301,7 @@
 					<param name="left">1230</param>
 					<param name="height">405</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">Zoyinc04$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
 					<param name="subheading2_visible">[Container.content(movies) | Container.content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
@@ -305,7 +314,7 @@
 					<param name="left">1230</param>
 					<param name="height">405</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">Zoyinc03$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
 					<param name="subheading2_visible">[Container.content(movies) | Container.content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
@@ -319,7 +328,7 @@
 					<param name="left">1230</param>
 					<param name="height">395</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">Zoyinc02$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
 					<param name="subheading2_visible">!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired))</param>
@@ -333,7 +342,7 @@
 					<param name="left">1230</param>
 					<param name="height">395</param>
 					<param name="width">650</param>
-					<param name="heading">$VAR[panelheading]</param>
+					<param name="heading">Zoyinc01$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="footer">$VAR[panelfooter]</param>
 					<param name="visibility">Control.IsVisible(50) + !$EXP[ListPanelIsDisabled] + $EXP[ListPanelIsSwapped] + Container.content(sets)</param>
@@ -366,8 +375,8 @@
 				<control type="group" description="50 MediaInfo">
 					<visible>Control.IsVisible(50)</visible>
 					<posx>30</posx>
-					<posy>351</posy>
-					<width>490</width>
+					<posy>0</posy>
+					<width>1100</width>
 					<control type="label">
 						<!--
 						# Album name above CD image
@@ -434,10 +443,11 @@
 					    <!--
 						# CD image, both when browsing Albums and when playing an Album
 						-->
-						<param name="width">490</param>
-						<param name="height">700</param>
+						<param name="width">1100</param>
+						<param name="height">1100</param>
 						<param name="texture">$VAR[Square]</param>
 						<param name="shadowoffset">20</param>
+						<param name="aspect">keep</param>
 						<param name="visibility">!$EXP[PVRChannelPlaying] + ![Container.Content(images) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons) | Container.Content(episodes)] + ![Window.IsActive(MyPVRRecordings.xml) + ListItem.IsFolder + !ListItem.IsParentFolder]</param>
 					</include>
 					<include content="ShadowedImage">
@@ -463,12 +473,12 @@
 					<control type="label">
 					    <!--
 						# Album artist, below CD image
-						# - Zoyinc
+						# -
 						-->
 						<top>650</top>
 						<height>45</height>
 						<align>center</align>
-						<label>$VAR[listmediafooter]Zoyinc015</label>
+						<label>$VAR[listmediafooter]</label>
 						<textcolor>$VAR[HighlightColor]</textcolor>
 					</control>
 					<!-- Rating overlay -->
