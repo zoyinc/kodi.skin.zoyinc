@@ -1880,7 +1880,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>$VAR[LabelTextColor]</textcolor>
-					<label>$INFO[ListItem.Label2,,. ]$INFO[ListItem.Label]$INFO[ListItem.Property(trackduration), • (,)]</label>
+					<label>$INFO[ListItem.Label2,,. ]$INFO[ListItem.Label]$INFO[ListItem.Property(trackduration), •XXX (,)]</label>
 					<textoffsetx>8</textoffsetx>
 					<scroll>false</scroll>
 				</control>
@@ -1896,7 +1896,7 @@
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor></shadowcolor>
 					<textoffsetx>8</textoffsetx>
-					<label>$INFO[ListItem.Label2,,. ]$INFO[ListItem.Label]$INFO[ListItem.Property(trackduration), • (,)]</label>
+					<label>$INFO[ListItem.Label2,,. ]$INFO[ListItem.Label]$INFO[ListItem.Property(trackduration), •XXX (,)]</label>
 				</control>
 			</focusedlayout>
 			<content>

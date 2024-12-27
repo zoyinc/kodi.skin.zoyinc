@@ -41,6 +41,7 @@
     <include file="Includes_Media.xml" />
     <include file="Includes_List.xml" />
     <include file="View_50_List.xml" />
+    <include file="View_50_List_Zoyinc_Music.xml" />
     <include file="View_51_Panel.xml" />
 	<include file="View_511_Panel2.xml" />
     <include file="View_52_BigList.xml" />

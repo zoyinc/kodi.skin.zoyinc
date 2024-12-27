@@ -152,11 +152,26 @@
 		</control>
 		
 		<include condition="Skin.HasSetting(Sub_MainMenuBG)">SubBackgroundLists</include>
+
+		<!--
+		# This is the background for the Album screen
+		# - Zoyinc
+		-->
 		<include>DefaultBackground</include>
-		<include content="View_50_List" condition="!Skin.HasSetting(ListCenterFocus)">
+
+		
+		<!--
+		# This adds the list of Albums and the tracks
+		# It includes "View_50_List_Zoyinc_Music.xml"
+		# - Zoyinc
+		-->
+		<include content="View_50_List_Zoyinc_Music" condition="!Skin.HasSetting(ListCenterFocus)">
+
 		    <param name="ListType">list</param>
 		</include>
-		<include content="View_50_List" condition="Skin.HasSetting(ListCenterFocus)">
+
+
+		<include content="View_50_List_Zoyinc_Music" condition="Skin.HasSetting(ListCenterFocus)">
 		    <param name="ListType">fixedlist</param>
 		</include>
 		<include>View_51_Panel</include>

@@ -1765,7 +1765,7 @@
 		<param name="viewid">50</param>
 		<param name="posx">50</param>
 		<param name="posy">590</param>
-		<param name="discsize">450</param>
+		<param name="discsize">250</param>
 		<definition>
 			<control type="group">
 				<visible>Skin.HasSetting($PARAM[viewid]_Show_Disc) + !Skin.HasSetting($PARAM[viewid]_Show_Top_Disc) + Control.IsVisible($PARAM[viewid]) + [Container.Content(movies) | [Container.Content(sets) + !Skin.HasSetting($PARAM[viewid]_Hide_Set_Disc)] | Container.Content(musicvideos)]</visible>
