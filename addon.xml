@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="kodi.skin.zoyinc" version="1.00.07" name="Zoyinc" provider-name="Zoyinc, https://www.zoyinc.com">
+<addon id="kodi.skin.zoyinc" version="1.00.08" name="Zoyinc" provider-name="Zoyinc, https://www.zoyinc.com">
     <requires>
         <import addon="xbmc.gui" version="5.17.0"/>
         <import addon="script.favourites" version="7.1.1"/>

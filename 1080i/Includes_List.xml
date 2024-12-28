@@ -1052,7 +1052,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
-				    <!-- <textcolor>Grey</textcolor> ZoyincTweak -->
+				    <!-- <textcolor>Grey</textcolor> -->
 				    <align>right</align>
 				    <label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
