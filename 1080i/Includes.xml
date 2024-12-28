@@ -1457,8 +1457,8 @@
                     <include content="SubcontentInfoList">
                         <param name="viewid">$PARAM[viewid]</param>
 						<param name="list_id">4400</param>
-						<param name="subcontent_label1">Zoyinc14$INFO[ListItem.Label][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Duration]</param>
-					    <param name="subcontent_label2">Zoyinc15$INFO[ListItem.Label][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$VAR[ItemDurationVar]</param>
+						<param name="subcontent_label1">$INFO[ListItem.Label][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Duration]</param>
+					    <param name="subcontent_label2">$INFO[ListItem.Label][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$VAR[ItemDurationVar]</param>
 						<param name="subcontent_visible">Window.IsActive(MyPVRRecordings.xml) + ListItem.IsFolder + !ListItem.IsParentFolder</param>
 		                <param name="subcontent_image_visible">false</param>
 						<param name="subcontent_sortby" value="date" />
@@ -1512,7 +1512,7 @@
                     <width>$PARAM[width]</width>
                     <height>60</height>
                     <font>ListDetails</font>
-                    <label>Zoyinc16$PARAM[footer]</label>
+                    <label>$PARAM[footer]</label>
 				    <aligny>top</aligny>
 					<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
                 </control>
