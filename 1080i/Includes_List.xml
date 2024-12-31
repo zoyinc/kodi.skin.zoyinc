@@ -995,7 +995,10 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>$VAR[MediaListLabel]</label>
+				    <!--
+					# Changed below to stop showing the track duration
+					-->
+					<label>$VAR[MediaListLabelZoyincMusic]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
                 </control>
 				<control type="label">
@@ -1047,7 +1050,7 @@
     				<!-- <right>5</right> -->
 					<posx>1200</posx>
 				    <posy>0</posy>
-				    <width>250</width>
+				    <width>270</width>
 				    <height>$PARAM[itemheight]</height>
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
@@ -1104,7 +1107,10 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
-					<label>$VAR[MediaListLabel]</label>
+					<!--
+					# Changed below to stop showing the track duration
+					-->
+					<label>$VAR[MediaListLabelZoyincMusic]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
 				<control type="label">
@@ -1162,7 +1168,7 @@
 	    			<!-- <right>5</right> -->
 					<posx>1200</posx>
 		    		<posy>0</posy>
-			    	<width>250</width>
+			    	<width>270</width>
 				    <height>$PARAM[itemheight]</height>
 				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>

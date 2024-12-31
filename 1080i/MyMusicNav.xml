@@ -155,7 +155,7 @@
 
 		<!--
 		# This is the background for the Album screen
-		# - Zoyinc
+		# ZoyincTweak
 		-->
 		<include>DefaultBackground</include>
 
@@ -163,13 +163,11 @@
 		<!--
 		# This adds the list of Albums and the tracks
 		# It includes "View_50_List_Zoyinc_Music.xml"
-		# - Zoyinc
+		# ZoyincTweak
 		-->
 		<include content="View_50_List_Zoyinc_Music" condition="!Skin.HasSetting(ListCenterFocus)">
-
 		    <param name="ListType">list</param>
 		</include>
-
 
 		<include content="View_50_List_Zoyinc_Music" condition="Skin.HasSetting(ListCenterFocus)">
 		    <param name="ListType">fixedlist</param>

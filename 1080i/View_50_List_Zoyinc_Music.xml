@@ -43,17 +43,83 @@
 
 				<visible>Control.IsVisible(50)</visible>
 				<include>ContentFade</include>
+
+				<!--
+				# Track info section
+				# ZoyincTweak
+				-->
+
+				<!-- # Track name - ZoyincTweak -->
 				<control type="label">
-					<!--
-					# Album name above CD image
-					# - Zoyinc
-					-->
-					<posx>1000</posx>
-					<posy>10</posy>s
-				    <wrapmultiline>true</wrapmultiline>
-					<label>$VAR[listmediaheader]</label>
+					<posx>1090</posx>
+					<posy>795</posy>
+				    <label>Track:</label>
 					<textcolor>$VAR[HighlightColor]</textcolor>
 				</control>
+				<control type="label">
+					<posx>1225</posx>
+					<posy>795</posy>
+				    <label>$INFO[ListItem.title]</label>
+					<textcolor>white</textcolor>
+				</control>
+
+				<!-- # Album name - ZoyincTweak -->
+				<control type="label">
+					<posx>1090</posx>
+					<posy>845</posy>
+				    <label>Album:</label>
+					<textcolor>$VAR[HighlightColor]</textcolor>
+				</control>
+				<control type="label">
+					<posx>1225</posx>
+					<posy>845</posy>
+				    <label>$INFO[ListItem.album]</label>
+					<textcolor>white</textcolor>
+				</control>
+
+				<!-- # Artist - ZoyincTweak -->
+				<control type="label">
+					<posx>1090</posx>
+					<posy>895</posy>
+				    <label>Artists:</label>
+					<textcolor>$VAR[HighlightColor]</textcolor>
+				</control>
+				<control type="label">
+					<posx>1225</posx>
+					<posy>895</posy>
+				    <label>$INFO[ListItem.artist]</label>
+					<textcolor>white</textcolor>
+				</control>
+
+				<!-- # Year - ZoyincTweak -->
+				<control type="label">
+					<posx>1090</posx>
+					<posy>945</posy>
+				    <label>Year:</label>
+					<textcolor>$VAR[HighlightColor]</textcolor>
+				</control>
+				<control type="label">
+					<posx>1225</posx>
+					<posy>945</posy>
+				    <label>$INFO[ListItem.year]</label>
+					<textcolor>white</textcolor>
+				</control>
+
+				<!-- # Duration - ZoyincTweak -->
+				<control type="label">
+					<posx>1090</posx>
+					<posy>995</posy>
+				    <label>Time:</label>
+					<textcolor>$VAR[HighlightColor]</textcolor>
+				</control>
+				<control type="label">
+					<posx>1225</posx>
+					<posy>995</posy>
+				    <label>$INFO[ListItem.duration]</label>
+					<textcolor>white</textcolor>
+				</control>
+
+
 				<control type="$PARAM[ListType]" id="50">
 					<visible>[$EXP[Exp_View_50] + Skin.HasSetting(Enable.NewViewSelector)] | [!Skin.HasSetting(hide.listview) + !Skin.HasSetting(Enable.NewViewSelector)]</visible>
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
@@ -65,7 +131,7 @@
 					# This increases the length/height of the list
 					# ZoyicTweak
 					-->
-					<height>855</height>
+					<height>700</height>
 					
 					<include condition="!Skin.HasSetting(Enable.TouchSupport)">ListHeightStandard</include>
 				    <include condition="Skin.HasSetting(Enable.TouchSupport)">ListHeightTouch</include>
@@ -407,13 +473,14 @@
 					<control type="label">
 						<!--
 						# Album name above CD image
-						# - Zoyinc
+						# We don't want this one so disabling
+						# ZoyincTweak
 						-->
 						<height>45</height>
 						<wrapmultiline>true</wrapmultiline>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$VAR[listmediaheader]</label>
+						<!-- <label>$VAR[listmediaheader]</label> -->
 						<textcolor>$VAR[HighlightColor]</textcolor>
 					</control>
 					<include content="ShadowedImage">
@@ -502,12 +569,13 @@
 					<control type="label">
 					    <!--
 						# Album artist, below CD image
-						# -
+						# We don't want this so disabling
+						#ZoyincTweak
 						-->
 						<top>650</top>
 						<height>45</height>
 						<align>center</align>
-						<label>$VAR[listmediafooter]</label>
+						<!-- <label>$VAR[listmediafooter]</label> -->
 						<textcolor>$VAR[HighlightColor]</textcolor>
 					</control>
 					<!-- Rating overlay -->
