@@ -49,11 +49,11 @@
 			    <control type="label" description="Main Label">
 					<!--
 					#
-					# List of Albums
+					# List of Albums, album name -ZoyincTweak 
 					# - Album name
 					# - When item is NOT FOCUSED
 					#
-					# ZoyincTweak
+					# 
 					-->
     				<posx>679</posx>
 				    <height>$PARAM[itemheight]</height>
@@ -80,11 +80,11 @@
 				<control type="label">
 					<!--
 					#
-					# List of Albums
+					# List of Albums, artist - ZoyincTweak
 					# - Album artist
 					# - When item is NOT FOCUSED
 					#
-					# ZoyincTweak
+					#
 					-->
     				<posx>1200</posx>
 				    <posy>0</posy>
@@ -164,11 +164,11 @@
 				<control type="label">
 					<!--
 					#
-					# List of Albums
+					# List of Albums - artist ZoyincTweak
 					# - Album artist
 					# - When item is FOCUSED
 					#
-					# ZoyincTweak
+					#
 					-->
 	    			<posx>1200</posx>
 				    <posy>0</posy>
@@ -982,11 +982,11 @@
 				<control type="label">
 					<!--
 					# 
-					# List of tracks for an album
+					# List of tracks for an album, track name - ZoyincTweak
 					# - Track name
 					# - NOT FOCUSED mode
 					#
-					# ZoyincTweak
+					# 
 					-->
     				<posx>679</posx>
 				    <posy>0</posy>
@@ -1041,11 +1041,11 @@
 				<control type="label">
 					<!--
 					# 
-					# List of tracks for an album
+					# List of tracks for an album, artist - ZoyincTweak
 					# - Artist name
 					# - NOT FOCUSED mode
 					#
-					# ZoyincTweak
+					# 
 					-->
     				<!-- <right>5</right> -->
 					<posx>1200</posx>
@@ -1091,11 +1091,11 @@
 				<control type="label">
 					<!--
 					# 
-					# List of tracks for an album
+					# List of tracks for an album, track name - ZoyincTweak
 					# - Track name
 					# - FOCUSED mode
 					#
-					# ZoyincTweak
+					#
 					-->
     				<posx>679</posx>
 				    <posy>0</posy>
@@ -1108,7 +1108,7 @@
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
 					<!--
-					# Changed below to stop showing the track duration
+					# Changed below to stop showing the track duration - ZoyincTweak
 					-->
 					<label>$VAR[MediaListLabelZoyincMusic]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
@@ -1159,11 +1159,11 @@
 			    </control>
 				<control type="label">
 					<!--
-					# List of tracks for album
+					# List of tracks for album - ZoyincTweak
 					# - Artist name
 					# - FOCUSED mode
 					#
-					# ZoyincTweak
+					# 
 					-->
 	    			<!-- <right>5</right> -->
 					<posx>1200</posx>

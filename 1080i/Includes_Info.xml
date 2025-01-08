@@ -2472,7 +2472,8 @@
 		</item>
 		<item>
 			<label>$LOCALIZE[15311]</label>
-			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<label2>ZoyincE01$INFO[ListItem.FilenameAndPath]</label2>
+			<scroll>true</scroll>
 			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 		</item>
 		<item>

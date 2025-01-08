@@ -101,11 +101,13 @@
 				<control type="label">
 					<posx>1225</posx>
 					<posy>945</posy>
-				    <label>$INFO[ListItem.year]</label>
+				    <!-- <label>$INFO[ListItem.year]</label> -->
+					<!-- <label>$INFO[ListItem.DBID]</label> -->
+					<label>$VAR[Square]</label>
 					<textcolor>white</textcolor>
 				</control>
 
-				<!-- # Duration - ZoyincTweak -->
+				<!-- # Duration - ZoyincTweak 
 				<control type="label">
 					<posx>1090</posx>
 					<posy>995</posy>
@@ -118,6 +120,32 @@
 				    <label>$INFO[ListItem.duration]</label>
 					<textcolor>white</textcolor>
 				</control>
+				-->
+
+
+			<control type="button" id="1">
+				<description>My first button control</description>
+				<left>1090</left>
+				<top>995</top>
+				<width>250</width>
+				<height>20</height>
+				<visible>true</visible>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texturefocus colordiffuse="FFFFAAFF">myfocustexture.png</texturefocus>
+				<texturenofocus colordiffuse="FFFFAAFF">mynormaltexture.png</texturenofocus>
+				<label>Magic</label>
+				<wrapmultiline>true</wrapmultiline>
+				<!-- <onclick>ActivateWindow(Pictures,"nfs://192.168.202.35/export/music/FLAC/Fleetwood Mac - Tusk/",return)</onclick> -->
+				<!-- <onclick>ActivateWindow(Pictures,"zip://$INFO[ListItem.path]Stuff.zip",return)</onclick> -->
+				<!-- <onclick>ActivateWindow(Pictures,"zip://nfs%3a%2f%2f192.168.202.35%2fexport%2fmusic%2fFLAC%2fAretha%20Franklin%20-%20So%20Damn%20Happy%2fStuff.zip/Stuff/",return)</onclick> -->
+				<onclick>ActivateWindow(Pictures,"zip://$INFO[ListItem.path]Stuff.zip/Stuff/",return)</onclick>
+				<onfocus></onfocus>
+				<onunfocus></onunfocus>
+				<onup>2</onup>
+				<ondown>3</ondown>
+				<onleft>1</onleft>
+				<onright>1</onright>
+			</control>
 
 
 				<control type="$PARAM[ListType]" id="50">
@@ -343,10 +371,10 @@
 				<include content="PanelTemplate">
 					<!--
 					#
-					# This is the panel directly to the right of the CD image for Albums
+					# This is the panel directly to the right of the CD image for Albums - ZoyincTweak
 					# It has CD title, artist, track listing, genre and so on
 					#
-					# ZoyincTweak
+					# 
 					-->
 					<param name="top">355</param>
 					<param name="left">535</param>
@@ -472,9 +500,9 @@
 					<width>1010</width>
 					<control type="label">
 						<!--
-						# Album name above CD image
+						# Album name above CD image - ZoyincTweak
 						# We don't want this one so disabling
-						# ZoyincTweak
+						# 
 						-->
 						<height>45</height>
 						<wrapmultiline>true</wrapmultiline>
@@ -535,8 +563,8 @@
 					
 					<include content="ShadowedImage">
 					    <!--
-						# CD image, both when browsing Albums and when playing an Album
-						# ZoyincTweak
+						# CD image, both when browsing Albums and when playing an Album - ZoyincTweak
+						# 
 						-->
 						<param name="width">1010</param>  <!--1010-->
 						<param name="height">1010</param>

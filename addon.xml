@@ -12,8 +12,8 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
-        <forum>https://forum.kodi.tv/forumdisplay.php?fid=203</forum>
-        <source>https://github.com/zoyinc/kodi.skin.amber-zoyinc</source>
+        <forum></forum>
+        <source>https://github.com/zoyinc/kodi.skin.zoyinc.git</source>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
@@ -29,7 +29,7 @@
             <screenshot>resources/screenshot10.jpg</screenshot>
         </assets>
         <news>
-        1.00.x Working on personal skin, "Zoyinc" which is 99.999% Amber with Zoyic tweaks
+        1.00.x Working on a personal skin, "Zoyinc" which is 99.999% Amber with Zoyic tweaks
         - Many thanks to those that created Amber
         3.4.32 (11-01-2022)
 		- Allow different view types for PVR

@@ -1,0 +1,3 @@
+Windows cmd command to move cover files on all subdirectories
+
+    M:\FLAC>for /f "delims=" %i in ('dir /B /X') do copy /Y "%i\stuff\cover.jpg"  "%i\cover.jpg"

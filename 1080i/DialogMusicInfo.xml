@@ -221,8 +221,8 @@
 			<scrolltime tween="quadratic">400</scrolltime>
 			<defaultcontrol always="true">90050</defaultcontrol>
 			<control type="group" id="89000"></control>
-			<!-- ZoyincDisable <include condition="String.IsEqual(ListItem.DBType,album)">DefaultTrackList</include> -->
-			<!-- ZoyincDisable <include condition="String.IsEqual(ListItem.DBType,artist)">DefaultAlbumList</include> -->
+			<!-- ZoyincTweak disable <include condition="String.IsEqual(ListItem.DBType,album)">DefaultTrackList</include> -->
+			<!-- ZoyincTweak disable <include condition="String.IsEqual(ListItem.DBType,artist)">DefaultAlbumList</include> -->
         </control>
 		
 	</controls>
