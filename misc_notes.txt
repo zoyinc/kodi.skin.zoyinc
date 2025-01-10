@@ -1,0 +1,3 @@
+
+<onclick>ActivateWindow(Pictures,"$INFO[ListItem.path]Stuff/",return)</onclick>
+Test button for pictures view_50_list_zoyinc_Music   @129
