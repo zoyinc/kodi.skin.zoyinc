@@ -107,13 +107,6 @@
                     <texture>$PARAM[texture]</texture>
                     <aspectratio align="$PARAM[align]" aligny="$PARAM[aligny]">$PARAM[aspect]</aspectratio>
                 </control>
-                <control type="label" description="ZoyincTest">
-                    <width>auto</width>
-                    <height>40</height>
-                    <textcolor>white</textcolor>
-                    <align>left</align>
-                    <label>ZoyincF02 $PARAM[texture]</label>
-                </control>
             </control>
 			<control type="group">
                 <top>$PARAM[top]</top>
@@ -135,13 +128,6 @@
                     <imagepath background="true">$PARAM[texture]</imagepath>
                     <aspectratio align="$PARAM[align]" aligny="$PARAM[aligny]">$PARAM[aspect]</aspectratio>
 					<fadetime>400</fadetime>
-                </control>
-                <control type="label" description="ZoyincTest">
-                    <width>auto</width>
-                    <height>40</height>
-                    <textcolor>white</textcolor>
-                    <align>left</align>
-                    <label>ZoyincF01 $PARAM[texture]</label>
                 </control>
             </control>
         </definition>

@@ -43,7 +43,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>Zoyinc02$VAR[MediaListLabel]</label>
+				    <label>$VAR[MediaListLabel]</label>
                     <visible>Skin.HasSetting(Hide.Label2.Lists) | [Container.Content(addons) + String.IsEqual(Container.SortMethod,$LOCALIZE[551])]</visible>
 				</control>
 			    <control type="label" description="Main Label">
@@ -74,7 +74,7 @@
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
 				    <align>right</align>
-				    <label>Zoyinc01$VAR[MediaListLabel2]</label>
+				    <label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + !Container.Content(albums)</visible>
 			    </control>
 				<control type="label">
@@ -128,11 +128,11 @@
 			    <control type="label" description="Main Label">
 					<!--
 					#
-					# List of Albums
+					# List of Albums - oyincTweak
 					# - Album or Song name
 					# - When item is FOCUSED
 					#
-					# ZoyincTweak
+					# Z
 					-->
     				<posx>679</posx>
 				    <height>$PARAM[itemheight]</height>
@@ -158,7 +158,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
-					<label>ZoyincC02$VAR[MediaListLabel2]</label>
+					<label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + !Container.Content(albums)</visible>
 			    </control>
 				<control type="label">
@@ -538,7 +538,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>ZoyincB09$VAR[MediaListLabel]</label>
+				    <label>$VAR[MediaListLabel]</label>
                     <visible>Skin.HasSetting(Hide.Label2.Lists) | [Container.Content(addons) + String.IsEqual(Container.SortMethod,$LOCALIZE[551])]</visible>
 				</control>
 			    <control type="label" description="Main Label">
@@ -548,7 +548,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>ZoyincB05$VAR[MediaListLabel]</label>
+				    <label>$VAR[MediaListLabel]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + ![Container.Content(addons) + String.IsEqual(Container.SortMethod,$LOCALIZE[551])]</visible>
 				</control>
 			    <control type="label">
@@ -561,7 +561,7 @@
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
 				    <align>right</align>
-				    <label>ZoyincB10$VAR[MediaListLabel2]</label>
+				    <label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists)</visible>
 			    </control>
 			    <include content="ListWatchedOverlay">
@@ -601,7 +601,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
-					<label>ZoyincB06$VAR[MediaListLabel]</label>
+					<label>$VAR[MediaListLabel]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + ![Container.Content(addons) + String.IsEqual(Container.SortMethod,$LOCALIZE[551])]</visible>
 				</control>
     			<control type="label">
@@ -996,7 +996,7 @@
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <!--
-					# Changed below to stop showing the track duration
+					# Changed below to stop showing the track duration - ZoyincTweak
 					-->
 					<label>$VAR[MediaListLabelZoyincMusic]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
@@ -1443,7 +1443,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>ZoyincB07$VAR[MediaListLabel]</label>
+				    <label>$VAR[MediaListLabel]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + ![Container.Content(addons) + String.IsEqual(Container.SortMethod,$LOCALIZE[551])]</visible>
 				</control>
 			    <control type="label">
@@ -1469,7 +1469,7 @@
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
 				    <align>right</align>
-				    <label>ZoyincD12$VAR[MediaListLabel2]</label>
+				    <label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + Container.Content(albums)</visible>
 			    </control>
 			    <include content="LowListWatchedOverlay">
@@ -1539,7 +1539,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
-					<label>ZoyincD11$VAR[MediaListLabel2]</label>
+					<label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + Container.Content(albums)</visible>
 			    </control>
 				<include content ="LowListWatchedOverlay">
@@ -2301,7 +2301,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>ZoyincD10$VAR[MediaListLabel]</label>
+				    <label>$VAR[MediaListLabel]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
                 </control>
 				<control type="label">
@@ -2393,7 +2393,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
-					<label>ZoyincD08$VAR[MediaListLabel]</label>
+					<label>$VAR[MediaListLabel]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
 				<control type="label">
@@ -2452,7 +2452,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
-					<label>ZoyincD07$VAR[MediaListLabel2]</label>
+					<label>$VAR[MediaListLabel2]</label>
                     <visible>[Container.Content(albums) | Container.Content(songs)] + !Skin.HasSetting(Hide.Label2.Lists)</visible>
 			    </control>
 				<include content ="LowListWatchedOverlay">
@@ -2741,7 +2741,7 @@
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
 				    <align>right</align>
-				    <label>ZoyincD06$VAR[MediaListLabel2]</label>
+				    <label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(images)]</visible>
 			    </control>
 			    <include content="TallListWatchedOverlay">
@@ -2811,7 +2811,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
-					<label>ZoyincD05$VAR[MediaListLabel2]</label>
+					<label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(images)]</visible>
 			    </control>
 				<include content ="TallListWatchedOverlay">
@@ -3647,7 +3647,7 @@
 				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
-				    <label>ZoyincD04$VAR[MediaListLabel]</label>
+				    <label>$VAR[MediaListLabel]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
                 </control>
 				<control type="label">
@@ -3697,7 +3697,7 @@
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
 				    <align>right</align>
-				    <label>ZoyincD03$VAR[MediaListLabel2]</label>
+				    <label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
 			    </control>
 			    <include content="TallListWatchedOverlay">
@@ -3739,7 +3739,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
-					<label>ZoyincD02$VAR[MediaListLabel]</label>
+					<label>$VAR[MediaListLabel]</label>
 					<visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
 				<control type="label">
@@ -3798,7 +3798,7 @@
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
-					<label>ZoyincD01$VAR[MediaListLabel2]</label>
+					<label>$VAR[MediaListLabel2]</label>
                     <visible>!Skin.HasSetting(Hide.Label2.Lists) + [Container.Content(albums) | Container.Content(songs)]</visible>
 			    </control>
 				<include content ="TallListWatchedOverlay">
