@@ -25,6 +25,14 @@
 	<onload condition="!String.IsEmpty(Skin.String(FocusedHomeControl))">Skin.Reset(FocusedHomeControl)</onload>
 	
 	<onunload condition="!String.IsEmpty(Skin.String(StartupPlaylist))">PlayerControl(Stop)</onunload>
+
+	<!--
+	# Set default settings values - ZoyincTweak
+	#
+	-->
+	<onload condition="!Skin.HasSetting(Hide.AllShelves)">Skin.SetBool(Hide.AllShelves, true)</onload>
+	<onload condition="!Skin.HasSetting(FadeUnfocusedMenu)">Skin.SetBool(FadeUnfocusedMenu, true)</onload>
+	<onload condition="!Skin.HasSetting(Shelf.PlayTrailers)">Skin.SetBool(Shelf.PlayTrailers, true)</onload>
 	
 	<controls>
 		<control type="button" id="11">
