@@ -37,7 +37,7 @@
 		<label2 />
 		<icon>icons/mainmenu/music.png</icon>
 		<thumb />
-		<action>ActivateWindow(Music,library://music/,return)</action>
+		<action>ActivateWindow(Music,musicdb://albums/,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>musicvideos</defaultID>

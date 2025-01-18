@@ -28,11 +28,9 @@
 
 	<!--
 	# Set default settings values - ZoyincTweak
-	#
+	# Set hide all shelves
 	-->
 	<onload condition="!Skin.HasSetting(Hide.AllShelves)">Skin.SetBool(Hide.AllShelves, true)</onload>
-	<onload condition="!Skin.HasSetting(FadeUnfocusedMenu)">Skin.SetBool(FadeUnfocusedMenu, true)</onload>
-	<onload condition="!Skin.HasSetting(Shelf.PlayTrailers)">Skin.SetBool(Shelf.PlayTrailers, true)</onload>
 	
 	<controls>
 		<control type="button" id="11">
