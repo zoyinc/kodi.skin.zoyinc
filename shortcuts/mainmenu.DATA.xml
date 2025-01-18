@@ -13,7 +13,7 @@
 		<label2 />
 		<icon>icons/mainmenu/videos.png</icon>
 		<thumb />
-		<action>ActivateWindow(videos,library://video/)</action>
+		<action>ActivateWindow(videos,sources://video,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>movies</defaultID>
@@ -54,7 +54,7 @@
         <thumb />
 		<label2 />
 		<icon>icons/mainmenu/livetv.png</icon>
-		<action>ActivateWindow(TVChannels)</action>
+		<action>ActivateWindow(TVRecordings)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>radio</defaultID>

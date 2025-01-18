@@ -130,7 +130,7 @@
 				<height>30</height>
 				<align>center</align>
 				<textcolor>blue</textcolor>
-				<label>[B][COLOR blueviolet]Z[/COLOR][COLOR blue]OYINC[/COLOR][/B] </label>
+				<label>[B][COLOR blueviolet]Z[/COLOR][COLOR dodgerblue]OYINC[/COLOR][/B] </label>
 			</control>
 			<control type="label" id="7002">
 				<top>960</top>
