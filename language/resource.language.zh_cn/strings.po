@@ -138,7 +138,7 @@ msgid "Order"
 msgstr "顺序"
 
 msgctxt "#31028"
-msgid "Amber Settings"
+msgid "Zoyinc Settings"
 msgstr "Amber 设置"
 
 msgctxt "#31029"

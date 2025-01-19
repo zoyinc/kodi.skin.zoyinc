@@ -138,7 +138,7 @@ msgid "Order"
 msgstr "Suund"
 
 msgctxt "#31028"
-msgid "Amber Settings"
+msgid "Zoyinc Settings"
 msgstr "Amber seaded"
 
 msgctxt "#31029"

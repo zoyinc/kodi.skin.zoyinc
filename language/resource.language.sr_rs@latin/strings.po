@@ -138,7 +138,7 @@ msgid "Order"
 msgstr "Redosled"
 
 msgctxt "#31028"
-msgid "Amber Settings"
+msgid "Zoyinc Settings"
 msgstr ""
 
 msgctxt "#31029"

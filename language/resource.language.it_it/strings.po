@@ -138,7 +138,7 @@ msgid "Order"
 msgstr "Ordinamento"
 
 msgctxt "#31028"
-msgid "Amber Settings"
+msgid "Zoyinc Settings"
 msgstr "Impostazioni Amber"
 
 msgctxt "#31029"

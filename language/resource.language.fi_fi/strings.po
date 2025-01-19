@@ -138,7 +138,7 @@ msgid "Order"
 msgstr "Suunta"
 
 msgctxt "#31028"
-msgid "Amber Settings"
+msgid "Zoyinc Settings"
 msgstr "Amber-asetukset"
 
 msgctxt "#31029"

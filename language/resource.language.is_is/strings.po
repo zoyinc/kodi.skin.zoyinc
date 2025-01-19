@@ -138,7 +138,7 @@ msgid "Order"
 msgstr "Röðun"
 
 msgctxt "#31028"
-msgid "Amber Settings"
+msgid "Zoyinc Settings"
 msgstr "Stillingar Amber"
 
 msgctxt "#31029"
