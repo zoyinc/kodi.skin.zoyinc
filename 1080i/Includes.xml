@@ -1231,6 +1231,301 @@
 		</definition>
 	</include>
 
+    <include name="PanelTemplateMyPVR">
+        <param name="lowpanel">false</param>
+        <param name="top"></param>
+        <param name="left">60</param>
+        <param name="height">430</param>
+		<param name="groupheight">610</param>
+        <param name="width">870</param>
+        <param name="heading"></param>
+        <param name="subheading"></param>
+        <param name="subheading2"></param>
+        <param name="subheading2_visible">false</param>
+        <param name="plot">$INFO[ListItem.Plot]</param>
+		<param name="plotheight">355</param>
+		<param name="plotheightlow">200</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
+        <param name="subcontent_path">videodb://movies/sets/$INFO[ListItem.DBID]/?setid=$INFO[ListItem.DBID]</param>
+        <param name="subcontent_sortby">year</param>
+        <param name="subcontent_sortorder">descending</param>
+        <param name="subcontent_visible">[ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</param>
+        <param name="subcontent_image_visible">true</param>
+        <param name="subcontent_image_texture">$VAR[Overlay]</param>
+        <param name="footer"></param>
+        <param name="visibility"></param>
+        <param name="showfooter">true</param>
+        <param name="showflags">true</param>
+		<param name="footertop">920</param>
+		<param name="footerheight">155</param>
+        <definition>
+            <control type="grouplist" id="4000" description="Media Info Panel">
+                <include>OpenClose</include>
+                <visible>$PARAM[visibility]</visible>
+                <visible>true</visible>
+                <posx>$PARAM[left]</posx>
+                <posy>$PARAM[top]</posy>
+                <width>$PARAM[width]</width>
+				<height>$PARAM[groupheight]</height>
+                <orientation>vertical</orientation>
+				<itemgap>10</itemgap>
+                <control type="label" description="Title Label">
+                    <visible>!$PARAM[lowpanel]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>60</height>
+                    <aligny>center</aligny>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
+                    <font>font20_title</font>
+                    <wrapmultiline>true</wrapmultiline>
+                    <label>$PARAM[heading]</label>
+                </control>
+                <control type="label" description="Title Label">
+					<visible>$PARAM[lowpanel]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>55</height>
+                    <aligny>center</aligny>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
+                    <font>font20_title</font>
+                    <label>$PARAM[heading]</label>
+					<wrapmultiline>true</wrapmultiline>
+                </control>
+                <control type="label" description="Subheading">
+                    <visible>!$PARAM[lowpanel] + Skin.HasSetting(ShowAudioSub) + !Container.Content(addons)</visible>
+                    <height>60</height>
+                    <width>$PARAM[width]</width>
+                    <font>font20_title</font>
+                    <label>[B]$PARAM[subheading][/B]</label>
+                    <aligny>center</aligny>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
+				<control type="label" description="Subheading">
+                    <visible>!$PARAM[lowpanel] + !Skin.HasSetting(ShowAudioSub) + !Container.Content(addons)</visible>
+                    <height>80</height>
+                    <width>$PARAM[width]</width>
+                    <font>font20_title</font>
+                    <label>[B]$PARAM[subheading][/B]</label>
+                    <aligny>center</aligny>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
+				<control type="label" description="Subheading">
+					<visible>$PARAM[lowpanel] + !Container.Content(addons)</visible>
+                    <height>60</height>
+                    <width>$PARAM[width]</width>
+                    <font>ListDetails</font>
+                    <label>[B]$PARAM[subheading][/B]</label>
+                    <aligny>center</aligny>
+					<scroll>false</scroll>
+					<wrapmultiline>true</wrapmultiline>
+                </control>
+				<!-- Audio/Sub info or Next Aired Episode info -->
+				<control type="group">
+				    <visible>$PARAM[subheading2_visible]</visible>
+                    <control type="label" description="Subheading2">
+                        <visible>!$PARAM[lowpanel]</visible>
+                        <top>10</top>
+						<height>40</height>
+                        <width>$PARAM[width]</width>
+                        <font>ListDetails</font>
+                        <label>[B]$PARAM[subheading2][/B]</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label" description="Subheading2">
+                        <top>10</top>
+						<visible>$PARAM[lowpanel]</visible>
+					    <height>30</height>
+                        <width>$PARAM[width]</width>
+                        <font>ListDetails</font>
+                        <label>[B]$PARAM[subheading2][/B]</label>
+                        <aligny>center</aligny>
+                    </control>                
+				</control>	
+                <control type="group">
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <!-- Plot when there is no next episode info or audio/sub info being displayed -->
+					<control type="textbox">
+                        <top>5</top>
+						<visible>[!Skin.HasSetting(ShowAudioSub) + [[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(episodes)]] | [ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)] | 
+						         [Skin.HasSetting(ShowAudioSub) + [String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + [[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(episodes)]] | 
+								 [String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+						<align>justify</align>
+                        <label fallback="19055">$PARAM[plot]</label>
+                        <font>InfoPlot</font>
+                        <autoscroll delay="3000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    </control>
+					<!-- Plot for other content types -->
+                    <!--
+                    #
+                    # Panel to display episode details for TV recording - ZoyincTweak
+                    #
+                    -->
+					<control type="textbox">
+                        <visible>![Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)] + ![$PARAM[subcontent_visible]]</visible>
+						<align>justify</align>
+                        <label fallback="19055">$PARAM[plot]</label>
+                        <font>InfoPlot</font>
+                        <autoscroll delay="3000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    </control>
+					<!-- Plot for normal panel when audio/sub info or next aired episode info is shown -->
+					<control type="textbox">
+					    <top>40</top>
+						<visible>!$PARAM[lowpanel] + [[Skin.HasSetting(ShowAudioSub) + [!String.IsEmpty(ListItem.Property(AudioLanguage.1)) | !String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + [Container.Content(movies) | Container.Content(episodes)]] | 
+						         [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) + [Container.Content(tvshows) | Container.Content(seasons)]]]</visible>
+						<height>$PARAM[plotheight]</height>
+                        <align>justify</align>
+                        <label fallback="19055">$PARAM[plot]</label>
+                        <font>InfoPlot</font>
+                        <autoscroll delay="3000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    </control>
+					<!-- Plot for episodes/tv shows/seasons in low panel when audio/sub info or next aired episode info is shown -->
+					<control type="textbox">
+					    <top>40</top>
+						<visible>$PARAM[lowpanel] + [[Skin.HasSetting(ShowAudioSub) + Container.Content(episodes) + 
+						         ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] | [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) + [Container.Content(tvshows) | Container.Content(seasons)]]]</visible>
+						<height>160</height>
+                        <align>justify</align>
+                        <label fallback="19055">$PARAM[plot]</label>
+                        <font>InfoPlot</font>
+                        <autoscroll delay="3000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    </control>
+					<!-- Plot for movies in low panel when audio/sub info is shown -->
+					<control type="textbox">
+					    <top>40</top>
+						<visible>$PARAM[lowpanel] + [Skin.HasSetting(ShowAudioSub) + Container.Content(movies) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</visible>
+						<height>160</height>
+                        <align>justify</align>
+                        <label fallback="19055">$PARAM[plot]</label>
+                        <font>InfoPlot</font>
+                        <autoscroll delay="3000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    </control>
+					<!-- Panel to show set info or artist discography info or album track info -->
+                    <control type="panel">
+                        <visible>$PARAM[subcontent_visible]</visible>
+                        <visible>!ListItem.IsParentFolder</visible>
+                        <orientation>vertical</orientation>
+                        <focusedlayout height="40" width="$PARAM[width]">
+                        </focusedlayout>
+                        <itemlayout height="40" width="$PARAM[width]">
+                            <control type="image">
+                                <top>5</top>
+                                <width>30</width>
+                                <height>30</height>
+                                <visible>$PARAM[subcontent_image_visible]</visible>
+                                <texture>$PARAM[subcontent_image_texture]</texture>
+                            </control>
+                            <control type="label">
+                                <left>40</left>
+                                <height>40</height>
+                                <width>$PARAM[width]</width>
+                                <aligny>center</aligny>
+                                <label>$PARAM[subcontent_label1]</label>
+                                <font>ListDetails</font>
+                                <scrollspeed>25</scrollspeed>
+                                <visible>$PARAM[subcontent_image_visible] + !Skin.HasSetting(Enable.HourMinutes)</visible>
+                            </control>
+                            <control type="label">
+                                <left>40</left>
+                                <height>40</height>
+                                <width>$PARAM[width]</width>
+                                <aligny>center</aligny>
+                                <label>$PARAM[subcontent_label2]</label>
+                                <font>ListDetails</font>
+                                <scrollspeed>25</scrollspeed>
+                                <visible>$PARAM[subcontent_image_visible] + Skin.HasSetting(Enable.HourMinutes)</visible>
+                            </control>
+                            <control type="label">
+                                <left>0</left>
+                                <height>40</height>
+                                <width>$PARAM[width]</width>
+                                <aligny>center</aligny>
+                                <label>$PARAM[subcontent_label1]</label>
+                                <font>ListDetails</font>
+                                <scrollspeed>25</scrollspeed>
+                                <visible>!$PARAM[subcontent_image_visible] + !Skin.HasSetting(Enable.HourMinutes)</visible>
+                            </control>
+                            <control type="label">
+                                <left>0</left>
+                                <height>40</height>
+                                <width>$PARAM[width]</width>
+                                <aligny>center</aligny>
+                                <label>$PARAM[subcontent_label2]</label>
+                                <font>ListDetails</font>
+                                <scrollspeed>25</scrollspeed>
+                                <visible>!$PARAM[subcontent_image_visible] + Skin.HasSetting(Enable.HourMinutes)</visible>
+                            </control>
+                        </itemlayout>
+                        <content sortby="$PARAM[subcontent_sortby]" sortorder="$PARAM[subcontent_order]">$PARAM[subcontent_path]</content>
+                    </control>
+                </control>
+			</control>
+			<!-- Footer and media flags -->
+            <control type="grouplist">
+                <visible>$PARAM[visibility]</visible>
+                <visible>[!String.IsEmpty(Listitem.Duration) | !String.IsEmpty(Listitem.Genre) | !String.IsEmpty(Listitem.Year) | !String.IsEmpty(ListItem.Episode)] | 
+				         [Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !String.IsEmpty(ListItem.Episode)]</visible>
+                <posx>$PARAM[left]</posx>
+                <posy>$PARAM[footertop]</posy>
+                <width>$PARAM[width]</width>
+				<height>$PARAM[footerheight]</height>
+				<itemgap>5</itemgap>
+                <orientation>vertical</orientation>	
+				<control type="label" description="Footer">
+                    <visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(musicvideos)]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>30</height>
+                    <font>ListDetails</font>
+                    <label>$VAR[panelfooter2]</label>
+                </control>				
+                <control type="label" description="Footer">
+                    <visible>$PARAM[showfooter] + !$PARAM[lowpanel]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>60</height>
+                    <font>ListDetails</font>
+                    <label>$PARAM[footer]</label>
+                    <wrapmultiline>true</wrapmultiline>
+				    <aligny>top</aligny>
+					<visible>!Container.Content(episodes)</visible>
+                </control>
+				<control type="label" description="Footer">
+                    <visible>$PARAM[showfooter] + $PARAM[lowpanel]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>30</height>
+                    <font>ListDetails</font>
+                    <label>$PARAM[footer]</label>
+				    <aligny>top</aligny>
+					<visible>!Container.Content(episodes)</visible>
+                </control>
+				<control type="label" description="Footer">
+                    <visible>$PARAM[showfooter]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>60</height>
+                    <font>ListDetails</font>
+                    <label>$PARAM[footer]</label>
+                    <wrapmultiline>true</wrapmultiline>
+				    <aligny>top</aligny>
+					<visible>Container.Content(episodes)</visible>
+                </control>
+                <control type="grouplist" description="Flags">
+                    <visible>$PARAM[showflags]</visible>
+                    <include>ContentFade</include>
+                    <width>$PARAM[width]</width>
+                    <height>40</height>
+                    <itemgap>20</itemgap>
+                    <orientation>horizontal</orientation>
+                    <align>left</align>
+                    <include condition="Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">69</param>
+                    </include>
+					<include condition="!Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+                    </include>
+                </control>
+			</control>	
+        </definition>
+    </include>
+
     <!-- Panel Template for all views except Tall List and Big List -->
     <include name="PanelTemplate">
         <param name="viewid">50</param>

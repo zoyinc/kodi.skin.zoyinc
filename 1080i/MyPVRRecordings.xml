@@ -538,12 +538,12 @@
                 </control>
             </control>
         </control>
-        <include content="PanelTemplate">
+        <include content="PanelTemplateMyPVR">
             <param name="top">445</param>
             <param name="height">280</param>
-            <param name="heading">$VAR[panelheading]</param>
-            <param name="subheading">$VAR[panelsubheading]</param>
-            <param name="plot">$VAR[Plots]</param>
+            <param name="heading">$INFO[Listitem.Title]</param><!-- Folder name to display in episode details for recordings - ZoyincTweak -->
+            <param name="subheading">$INFO[Listitem.Duration]</param><!-- Duration of TV recording - ZoyincTweak -->
+            <param name="plot">$VAR[Plots]</param><!-- Episode title - ZoyincTweak -->
             <param name="footer">$VAR[panelfooter]</param>
             <param name="visibility">!ListItem.IsFolder</param>
             <param name="showflags">false</param>
