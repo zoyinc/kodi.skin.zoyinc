@@ -4,17 +4,22 @@
     <views>50</views>
     <controls>
         <include>DefaultBackground</include>
+        <!--
+        # Disabled DefaultBackground as we are doing differently - ZoyincTweak
+        #
         <include content="BackgroundOverlay">
             <param name="parentid" value="50"/>
         </include>
+        -->
         <include>Time</include>
-	<!--
-    ################################
-    #
-    #         Main list when you go into a folder
-    #
-    ################################
-    -->
+
+        <!--
+        ################################
+        #
+        #         Main list when you go into a folder
+        #
+        ################################
+        -->
         <control type="group">
             <include>OpenClose</include>
             <control type="group" description="REC group">
@@ -35,15 +40,15 @@
                     <ondown>50</ondown>
                     <pagecontrol>60</pagecontrol>
                     <scrolltime tween="sine" easing="inout">280</scrolltime>
-                    <!-- TonyP Disable the list viewtype -->
+                    <!-- ZoyincTweak Disable the list viewtype -->
                     <!-- <viewtype label="535">list</viewtype>-->
-				<!--
-				###
-				#
-				# When episode is NOT focused
-				#
-				###
-				-->
+                    <!--
+                    ###
+                    #
+                    # When episode is NOT focused
+                    #
+                    ###
+                    -->
                     <itemlayout height="60">
                         <control type="image">
                             <height>60</height>
@@ -97,9 +102,9 @@
 							  <bordersize>5</bordersize>
 							  <aspectratio>keep</aspectratio>
 						</control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   S11E09 The Witchfinders
+						# Display:   S11E09 The Witchfinders - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -115,17 +120,17 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>S$INFO[ListItem.Season]E$INFO[ListItem.Episode]</label>
+                            <label>[B]S$INFO[ListItem.Season]E$INFO[ListItem.Episode][/B]</label>
                             <visible>[!Integer.IsEqual(ListItem.Episode,0)] + [!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
-						<!-- If Episode = 0 then it returns episode = "" -->
+						<!-- If Episode = 0 then it returns episode = "" - ZoyincTweak-->
 						<control type="label" description="Main Label">
                             <left>50</left>
                             <height>45</height>
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>S$INFO[ListItem.Season]E0</label>
+                            <label>[B]S$INFO[ListItem.Season]E0[/B]</label>
                             <visible>[Integer.IsEqual(ListItem.Episode,0)] + [!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
 						<control type="label" description="Main Label">
@@ -137,9 +142,9 @@
                             <label>$INFO[ListItem.EpisodeName]   [COLOR deepskyblue](NC)[/COLOR]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -153,7 +158,7 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.Episode].</label>
+                            <label>[B]$INFO[ListItem.Episode].[/B]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)]+ Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
 						<control type="label" description="Main Label">
@@ -162,12 +167,12 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.EpisodeName]   [COLOR deepskyblue](NC)[/COLOR]</label>
+                            <label>[B]$INFO[ListItem.EpisodeName]   [COLOR deepskyblue](NC)[/COLOR][/B]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)]+ Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>                        
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Does not have an EpisodeName
@@ -180,12 +185,12 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.Label]   [COLOR deepskyblue](NC)[/COLOR]</label>
+                            <label>[B]$INFO[ListItem.Label]   [COLOR deepskyblue](NC)[/COLOR][/B]</label>
                             <visible>[String.IsEmpty(ListItem.EpisodeName)] + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   S11E09 The Witchfinders
+						# Display:   S11E09 The Witchfinders - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -201,7 +206,7 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>S$INFO[ListItem.Season]E$INFO[ListItem.Episode]</label>
+                            <label>[B]S$INFO[ListItem.Season]E$INFO[ListItem.Episode][/B]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
 						<control type="label" description="Main Label">
@@ -210,12 +215,12 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.EpisodeName]</label>
+                            <label>[B]$INFO[ListItem.EpisodeName][/B]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -229,7 +234,7 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.Episode].</label>
+                            <label>[B]$INFO[ListItem.Episode].[/B]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)]+ Integer.IsEqual(ListItem.Season,999) + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
 						<control type="label" description="Main Label">
@@ -238,12 +243,12 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.EpisodeName]</label>
+                            <label>[B]$INFO[ListItem.EpisodeName][/B]</label>
                             <visible>[!String.IsEmpty(ListItem.EpisodeName)]+ Integer.IsEqual(ListItem.Season,999) + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>                        
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Does not have an EpisodeName
@@ -256,12 +261,12 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <font>InfoPlot</font>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>[B]$INFO[ListItem.Label][/B]</label>
                             <visible>[String.IsEmpty(ListItem.EpisodeName)] + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                         </control>
 						<!--
 						#
-						# Show date on all lines
+						# Show date on all lines - ZoyincTweak
 						#
 						-->
                         <control type="label" description="Label2">
@@ -272,13 +277,13 @@
                             <textcolor>Grey</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
-                            <label>$INFO[ListItem.Date]</label>
+                            <label>[B]$INFO[ListItem.Date][/B]</label>
                         </control>
                     </itemlayout>
 <!--
                     ###
                     #
-                    # When episode is focused
+                    # When episode is focused - ZoyincTweak
                     #
                     ###
                     -->
@@ -292,7 +297,7 @@
 						<!--
 						###
 						#
-						# Display green dot if list item is NOT a folder 
+						# Display green dot if list item is NOT a folder - ZoyincTweak
 						# and the item/recording has been checked to be ok:
 						#
 						#    String.Contains(ListItem.Plot,"CHECKEDOK")
@@ -322,9 +327,9 @@
                             <height>33</height>
                             <texture>$VAR[Overlay]</texture>
                         </control>
-                        <!-- TonyP
+                        <!-- 
 						#
-						# Display:   S11E09 The Witchfinders
+						# Display:   S11E09 The Witchfinders - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -346,7 +351,7 @@
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>
-						<!-- If the episode is equal to 0 - for some reason it prints as a blank -->
+						<!-- If the episode is equal to 0 - for some reason it prints as a blank -ZoyincTweak -->
 						<control type="label" description="Main Label">
                             <left>50</left>
                             <height>45</height>
@@ -371,9 +376,9 @@
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -405,9 +410,9 @@
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>                        
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Does not have an EpisodeName
@@ -426,9 +431,9 @@
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   S11E09 The Witchfinders
+						# Display:   S11E09 The Witchfinders - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -462,9 +467,9 @@
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks - ZoyincTweak
 						#
                         # Item
                         # - Has an EpisodeName
@@ -496,9 +501,9 @@
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>                        
-						<!-- TonyP
+						<!-- 
 						#
-						# Display:   2. Return of Daleks
+						# Display:   2. Return of Daleks ZoyincTweak
 						#
                         # Item
                         # - Does not have an EpisodeName
@@ -519,7 +524,7 @@
                         </control>
 						<!--
 						#
-						# Show date on all lines
+						# Show date on all lines ZoyincTweak
 						#
 						-->
                         <control type="label" description="Label2">
@@ -539,15 +544,15 @@
             </control>
         </control>
         <include content="PanelTemplateMyPVR">
-            <param name="top">445</param>
+            <param name="top">450</param>
             <param name="height">280</param>
-            <param name="heading">$INFO[Listitem.Title]</param><!-- Folder name to display in episode details for recordings - ZoyincTweak -->
+            <param name="heading">[B]$INFO[Listitem.Title][/B]</param><!-- Folder name to display in episode details for recordings - ZoyincTweak -->
             <param name="subheading">$INFO[Listitem.Duration]</param><!-- Duration of TV recording - ZoyincTweak -->
             <param name="plot">$VAR[Plots]</param><!-- Episode title - ZoyincTweak -->
-            <param name="footer">$VAR[panelfooter]</param>
+            <param name="footer">[B]$VAR[panelfooter][/B]</param>
             <param name="visibility">!ListItem.IsFolder</param>
             <param name="showflags">false</param>
-                        <param name="footertop">920</param>
+            <param name="footertop">920</param>
         </include>
                 <include content="PanelTemplate">
             <param name="top">445</param>
@@ -610,9 +615,9 @@
                             <height>30</height>
                             <texture>$VAR[Overlay]</texture>
                         </control>
-                        <!-- TonyP
+                        <!-- 
 						#
-						# Display:   Doctor Who (NC)
+						# Display:   Doctor Who (NC) - ZoyincTweak
 						#
                         # Item
                         # - Does NOT have an EpisodeName
@@ -633,7 +638,7 @@
 							</control>
 							<control type="label" description="Label2">
 								<!--
-								# Only  display the date/time if an episode name is not given
+								# Only  display the date/time if an episode name is not given - ZoyincTweak
 								# This is a cosmetic choice
 								-->
 								<left>650</left>
@@ -645,16 +650,16 @@
 								<scrollspeed>25</scrollspeed>
 								<textcolor>yellow</textcolor>
 								<visible>[String.IsEmpty(ListItem.EpisodeName)] + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
-							</control><!-- TonyP
-						#
-						# Display:  S1E3 The Evil of the Daleks (NC)
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season is NOT 999
-                        # - Item has been NOT been checked  
-                        #
-                        -->
+							</control><!-- 
+                            #
+                            # Display:  S1E3 The Evil of the Daleks (NC) ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season is NOT 999
+                            # - Item has been NOT been checked  
+                            #
+                            -->
                             <control type="label" >                                
                                 <left>40</left>
                                 <height>40</height>
@@ -666,7 +671,7 @@
                                 <scrollspeed>25</scrollspeed>
                                 <visible>[!Integer.IsEqual(ListItem.Episode,0)] + [!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                             </control>
-							<!-- Episode is zero, for some reason it prints a blank -->
+							<!-- Episode is zero, for some reason it prints a blank - ZoyincTweak -->
 							<control type="label" >                                
                                 <left>40</left>
                                 <height>40</height>
@@ -689,16 +694,16 @@
                                 <scrollspeed>25</scrollspeed>
                                 <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                             </control>
-                        <!-- TonyP
-						#
-						# Display:  2. The Evil of the Daleks (NC)
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season == 999
-                        # - Item has been NOT been checked  
-                        #
-                        -->
+                            <!-- 
+                            #
+                            # Display:  2. The Evil of the Daleks (NC) - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season == 999
+                            # - Item has been NOT been checked  
+                            #
+                            -->
 							<control type="label" description="Main Label">
 								<left>40</left>
 								<height>40</height>
@@ -719,16 +724,16 @@
 								<textcolor>yellow</textcolor>
 								<visible>[!String.IsEmpty(ListItem.EpisodeName)]+ Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
 							</control>
-						<!-- TonyP
-						#
-						# Display:   Doctor Who
-						#
-                        # Item
-                        # - Does NOT have an EpisodeName
-                        # - Item has been checked and is OK
-                        #
-                        # This will display:
-                        #     
+                            <!-- 
+                            #
+                            # Display:   Doctor Who - ZoyincTweak
+                            #
+                            # Item
+                            # - Does NOT have an EpisodeName
+                            # - Item has been checked and is OK
+                            #
+                            # This will display:
+                            #     
                         -->
 							<control type="label" description="Main Label">
 								<left>40</left>
@@ -742,7 +747,7 @@
 							</control>
 							<control type="label" description="Label2">
 								<!--
-								# Only  display the date/time if an episode name is not given
+								# Only  display the date/time if an episode name is not given - ZoyincTweak
 								# This is a cosmetic choice
 								-->
 								<left>650</left>
@@ -754,16 +759,17 @@
 								<scrollspeed>25</scrollspeed>
 								<textcolor>yellow</textcolor>
 								<visible>[String.IsEmpty(ListItem.EpisodeName)] + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
-							</control><!-- TonyP
-						#
-						# Display:  S1E3 The Evil of the Daleks
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season is NOT 999
-                        # - Item has been checked and is OK 
-                        #
-                        -->
+							</control>
+                            <!-- 
+                            #
+                            # Display:  S1E3 The Evil of the Daleks - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season is NOT 999
+                            # - Item has been checked and is OK 
+                            #
+                            -->
                             <control type="label" >                                
                                 <left>40</left>
                                 <height>40</height>
@@ -786,16 +792,16 @@
                                 <scrollspeed>25</scrollspeed>
                                 <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                             </control>
-                        <!-- TonyP
-						#
-						# Display:  2. The Evil of the Daleks
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season == 999
-                        # - Item has been checked and is OK  
-                        #
-                        -->
+                            <!-- 
+                            #
+                            # Display:  2. The Evil of the Daleks - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season == 999
+                            # - Item has been checked and is OK  
+                            #
+                            -->
 							<control type="label" description="Main Label">
 								<left>40</left>
 								<height>40</height>
@@ -821,14 +827,14 @@
 					<!--
                     ###
                     #
-                    # When episode is NOT focused
+                    # When episode is NOT focused - ZoyincTweak
                     #
                     ###
                     -->
 						<!--
 						###
 						#
-						# Display green dot if list item is NOT a folder 
+						# Display green dot if list item is NOT a folder - ZoyincTweak
 						# and the item/recording has been checked to be ok:
 						#
 						#    String.Contains(ListItem.Plot,"CHECKEDOK")
@@ -860,9 +866,9 @@
                         </control>
 						
 
-                        <!-- TonyP
+                        <!-- 
 						#
-						# Display:   Doctor Who (NC)
+						# Display:   Doctor Who (NC) - ZoyincTweak
 						#
                         # Item
                         # - Does NOT have an EpisodeName
@@ -882,7 +888,7 @@
 							</control>
 							<control type="label" description="Label2">
 								<!--
-								# Only  display the date/time if an episode name is not given
+								# Only  display the date/time if an episode name is not given - ZoyincTweak
 								# This is a cosmetic choice
 								-->
 								<left>650</left>
@@ -893,16 +899,17 @@
 								<font>ZoyincPVRSmall</font>
 								<scrollspeed>25</scrollspeed>
 								<visible>[String.IsEmpty(ListItem.EpisodeName)] + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
-							</control><!-- TonyP
-						#
-						# Display:  S1E3 The Evil of the Daleks (NC)
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season is NOT 999
-                        # - Item has been NOT been checked  
-                        #
-                        -->
+							</control>
+                            <!-- 
+                            #
+                            # Display:  S1E3 The Evil of the Daleks (NC) - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season is NOT 999
+                            # - Item has been NOT been checked  
+                            #
+                            -->
                             <control type="label" >                                
                                 <left>40</left>
                                 <height>40</height>
@@ -913,7 +920,7 @@
                                 <scrollspeed>25</scrollspeed>
                                 <visible>[!Integer.IsEqual(ListItem.Episode,0)] + [!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                             </control>
-							<!-- Episode is zero which seems to display as blank -->
+							<!-- Episode is zero which seems to display as blank - ZoyincTweak -->
 							<control type="label" >                                
                                 <left>40</left>
                                 <height>40</height>
@@ -934,16 +941,16 @@
                                 <scrollspeed>25</scrollspeed>
                                 <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                             </control>
-                        <!-- TonyP
-						#
-						# Display:  2. The Evil of the Daleks (NC)
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season == 999
-                        # - Item has been NOT been checked  
-                        #
-                        -->
+                            <!-- 
+                            #
+                            # Display:  2. The Evil of the Daleks (NC) - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season == 999
+                            # - Item has been NOT been checked  
+                            #
+                            -->
 							<control type="label" description="Main Label">
 								<left>40</left>
 								<height>40</height>
@@ -962,17 +969,17 @@
 								<label>$INFO[ListItem.EpisodeName]   [COLOR deepskyblue](NC)[/COLOR]</label>
 								<visible>[!String.IsEmpty(ListItem.EpisodeName)]+ Integer.IsEqual(ListItem.Season,999) + [[String.Contains(ListItem.Plot,"NOTCHECKED")] | [String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
 							</control>
-						<!-- TonyP
-						#
-						# Display:   Doctor Who
-						#
-                        # Item
-                        # - Does NOT have an EpisodeName
-                        # - Item has been checked and is OK
-                        #
-                        # This will display:
-                        #     
-                        -->
+                            <!-- 
+                            #
+                            # Display:   Doctor Who - ZoyincTweak
+                            #
+                            # Item
+                            # - Does NOT have an EpisodeName
+                            # - Item has been checked and is OK
+                            #
+                            # This will display:
+                            #     
+                            -->
 							<control type="label" description="Main Label">
 								<left>40</left>
 								<height>40</height>
@@ -984,7 +991,7 @@
 							</control>
 							<control type="label" description="Label2">
 								<!--
-								# Only  display the date/time if an episode name is not given
+								# Only  display the date/time if an episode name is not given - ZoyincTweak
 								# This is a cosmetic choice
 								-->
 								<left>650</left>
@@ -995,16 +1002,17 @@
 								<font>ZoyincPVRSmall</font>
 								<scrollspeed>25</scrollspeed>
 								<visible>[String.IsEmpty(ListItem.EpisodeName)] + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
-							</control><!-- TonyP
-						#
-						# Display:  S1E3 The Evil of the Daleks
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season is NOT 999
-                        # - Item has been checked and is OK 
-                        #
-                        -->
+							</control>
+                            <!-- 
+                            #
+                            # Display:  S1E3 The Evil of the Daleks - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season is NOT 999
+                            # - Item has been checked and is OK 
+                            #
+                            -->
                             <control type="label" >                                
                                 <left>40</left>
                                 <height>40</height>
@@ -1023,16 +1031,16 @@
                                 <label>$INFO[ListItem.EpisodeName]</label>
                                 <visible>[!String.IsEmpty(ListItem.EpisodeName)] + !Integer.IsEqual(ListItem.Season,999) + [[!String.Contains(ListItem.Plot,"NOTCHECKED")] + [!String.Contains(ListItem.Plot,"UNCHECKED")]]</visible>
                             </control>
-                        <!-- TonyP
-						#
-						# Display:  2. The Evil of the Daleks
-						#
-                        # Item
-                        # - Has an EpisodeName
-                        # - The season == 999
-                        # - Item has been checked and is OK  
-                        #
-                        -->
+                            <!-- 
+                            #
+                            # Display:  2. The Evil of the Daleks - ZoyincTweak
+                            #
+                            # Item
+                            # - Has an EpisodeName
+                            # - The season == 999
+                            # - Item has been checked and is OK  
+                            #
+                            -->
 							<control type="label" description="Main Label">
 								<left>40</left>
 								<height>40</height>

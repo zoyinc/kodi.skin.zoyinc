@@ -4,7 +4,7 @@
 	<color name="Grey2">FFBEBEBE</color>
 	<color name="Grey">FF5E5E5E</color>
 	<color name="Details">FF777777</color>
-	<color name="White">FFCCCCCC</color>
+	<color name="White">FFFFFFFF</color><!-- White should mean white ZoyincTweak -->
 	<color name="White2">FFFFFFFF</color>
 	<color name="Red">FFfe3737</color>
 	<color name="Green">FF45b864</color>

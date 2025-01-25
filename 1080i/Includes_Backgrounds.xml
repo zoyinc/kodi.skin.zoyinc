@@ -124,7 +124,7 @@
 	</variable>
 	<variable name="Music.Art" description="Calculate BG to show">
 		<value condition="!String.IsEmpty(Skin.String(Music.Background))">$INFO[Skin.String(Music.Background)]</value>
-		<value>special://skin/backgrounds/Music.jpg</value>
+		<value>special://skin/backgrounds/Zoyinc_Music.jpg</value>
 	</variable>
 	<variable name="Pictures.Art" description="Calculate BG to show">
 		<value condition="!String.IsEmpty(Skin.String(Pictures.Background))">$INFO[Skin.String(Pictures.Background)]</value>
@@ -212,7 +212,7 @@
 		<value condition="Skin.HasSetting(Use.ParentFolderFanart) + !String.IsEmpty(Control.GetLabel(4444)) + !ListItem.IsParentFolder">$INFO[Control.GetLabel(4444)]</value>
 		<value condition="Skin.HasSetting(Use.ParentFolderFanart) + !String.IsEmpty(Control.GetLabel(4445)) + !ListItem.IsParentFolder">$INFO[Control.GetLabel(4445)]</value>
 		<value condition="Window.IsActive(service-LibreELEC-Settings-mainWindow.xml)">special://skin/backgrounds/LibreELEC.jpg</value>
-		<value condition="Window.IsVisible(Custom_1136_TMDbTVGuide.xml) | Window.IsVisible(Custom_1137_EmbInfoTVGuide.xml)">special://skin/backgrounds/Default.jpg</value>
+		<value condition="Window.IsVisible(Custom_1136_TMDbTVGuide.xml) | Window.IsVisible(Custom_1137_EmbInfoTVGuide.xml)">special://skin/backgrounds/Zoyinc_Sub_Default.jpg</value>
 		<value condition="[Window.IsVisible(script-embuary-person.xml)] + !String.IsEmpty(Container(2003).ListItem.Icon) + !Container.OnNext + !Container.OnPrevious">$INFO[Container(2003).ListItem.Icon]</value>
 		<!-- Default background for sub windows -->
 		<value condition="!Skin.HasSetting(Sub_FanArtBG)">$VAR[SubDefaultBackground]</value>
@@ -236,7 +236,7 @@
 
 	<variable name="SubDefaultBackground">
 		<value condition="Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(Default.Background))">$INFO[Skin.String(Default.Background)]</value>
-		<value condition="Skin.HasSetting(Sub_DefaultBG)">special://skin/backgrounds/Default.jpg</value>
+		<value condition="Skin.HasSetting(Sub_DefaultBG)">special://skin/backgrounds/Zoyinc_Sub_Default.jpg</value>
 		<value condition="Skin.HasSetting(Sub_MainMenuBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.Movie.Fanart) + !String.IsEmpty(Container(112341).ListItem.Art(fanart))">$INFO[Container(112341).ListItem.Art(fanart)]</value>
 		<value condition="Skin.HasSetting(Sub_MainMenuBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.TV.Fanart) + !String.IsEmpty(Container(112342).ListItem.Art(fanart))">$INFO[Container(112342).ListItem.Art(fanart)]</value>
 		<value condition="Skin.HasSetting(Sub_MainMenuBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.Video.Fanart) + !String.IsEmpty(Container(112346).ListItem.Art(fanart))">$INFO[Container(112346).ListItem.Art(fanart)]</value>
@@ -250,7 +250,7 @@
 		                  ![String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.Movie.Fanart) | String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.TV.Fanart) | 
 						    String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.Video.Fanart) | String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.Music.Fanart) | 
 							String.IsEqual(Skin.String(FocusedMenu.Background),Kodi.Global.Fanart)]">$INFO[Skin.String(FocusedMenu.Background)]</value>
-		<value>special://skin/backgrounds/Default.jpg</value>
+		<value>special://skin/backgrounds/Zoyinc_Sub_Default.jpg</value>
 	</variable>
 
 	<variable name="HomeBackground">
@@ -296,7 +296,7 @@
 		<value condition="!Skin.HasSetting(HomeDefaultBG) + Control.HasFocus(9001) + String.IsEqual(Container(9001).ListItem.Property(background),playlistBackground) + !String.IsEmpty(Container(9001).ListItem.Property(backgroundPlaylist)) + [String.IsEqual(Container(9001).ListItem.Property(EHPlaylistFanart),true) + Skin.HasSetting(Enable.EmbuaryHelper)]">$INFO[Container(99891).ListItem.Art(fanart)]</value>
 		<!-- Default background -->
 		<value condition="Skin.HasSetting(HomeDefaultBG) + !String.IsEmpty(Skin.String(Default.Background))">$INFO[Skin.String(Default.Background)]</value>
-		<value condition="Skin.HasSetting(HomeDefaultBG)">special://skin/backgrounds/Default.jpg</value>
+		<value condition="Skin.HasSetting(HomeDefaultBG)">special://skin/backgrounds/Zoyinc_Sub_Default.jpg</value>
 		<!-- Main Menu background: Random fanart, Kodi-based -->
 		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Kodi.Movie.Fanart)">$INFO[Container(12341).ListItem.Art(fanart)]</value>
 		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Kodi.TV.Fanart)">$INFO[Container(12342).ListItem.Art(fanart)]</value>
@@ -398,7 +398,11 @@
 										  !String.IsEmpty(ListItem.Art(artist.fanart1)) | !String.IsEmpty(Container.ListItem.Art(artist.fanart1)) | 
 										  !String.IsEmpty(ListItem.Art(albumartist.fanart1)) | !String.IsEmpty(Container.ListItem.Art(albumartist.fanart1))</expression>
 
-	<include name="DefaultBackground">
+	<!--
+	#
+	# Replaced DefaultBackground with much simpler version below it - ZoyincTweak
+	#
+	<include name="DefaultBackground-DISABLED">
 		<control type="multiimage">
 			<visible>![Player.HasVideo + [Skin.HasSetting(Show_VideoBackground) | Skin.HasSetting(AutoPlayTrailer)]]</visible>
 			<visible>[!Control.IsVisible(56) | [Control.IsVisible(56) + !$EXP[56_FanartViewNetflix]]]</visible>
@@ -451,7 +455,23 @@
             </control>
 		</control>
 	</include>
-	
+	-->
+	<include name="DefaultBackground"> 
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<timeperimage>8000</timeperimage>
+			<fadetime>400</fadetime>
+			<imagepath background="true">$VAR[SubBackground]</imagepath>
+			<randomize>true</randomize>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Use.KenBurnsEffect)">Conditional</animation>
+			<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Use.KenBurnsEffect)">Conditional</animation>
+		</control>
+		
+	</include>
+
+
 	<include name="PVRBackground">
 	    <param name="viewid">50</param>
 		<definition>

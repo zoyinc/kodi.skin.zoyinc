@@ -14,9 +14,13 @@
 				    <param name="viewid">152</param>
 				</include>				
 				
+				<!--
+				# No using overlays, doing it simpler - ZoyincTweak
+				#
 				<include content="BackgroundOverlay">
 			        <param name="parentid" value="52"/>
 		        </include>
+				-->
 			    <visible>Control.IsVisible(52)</visible>
 			    <include>ContentFade</include>
 			    <control type="$PARAM[ListType]" id="52">
