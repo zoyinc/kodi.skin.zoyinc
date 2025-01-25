@@ -274,7 +274,7 @@
                             <height>45</height>
                             <width>820</width>
                             <font>InfoPlot</font>
-                            <textcolor>Grey</textcolor>
+                            <textcolor>White</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
                             <label>[B]$INFO[ListItem.Date][/B]</label>
@@ -534,8 +534,8 @@
                             <font>InfoPlot</font>
                             <scroll>false</scroll>
                             <align>right</align>
-                            <label>$INFO[ListItem.Date]</label>
-							<textcolor>$VAR[FocusedTextColor]</textcolor>
+                            <label>[B]$INFO[ListItem.Date][/B]</label>
+							<textcolor>Black</textcolor>
                             <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>
