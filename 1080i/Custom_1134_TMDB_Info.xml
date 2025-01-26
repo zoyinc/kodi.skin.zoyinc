@@ -11,7 +11,7 @@
         <control type="image">
             <width>1920</width>
             <height>1080</height>
-            <texture background="true">special://skin/backgrounds/Zoyinc_Sub_Default_Original.jpg</texture>
+            <texture background="true">special://skin/backgrounds/Zoyinc_Sub_Default.jpg</texture>
             <aspectratio>scale</aspectratio>
         </control>
         <include content="BackgroundOverlay">
