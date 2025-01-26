@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="kodi.skin.zoyinc" version="1.00.14" name="Zoyinc" provider-name="Zoyinc, https://www.zoyinc.com">
+<addon id="kodi.skin.zoyinc" version="1.3" name="Zoyinc" provider-name="Zoyinc, https://www.zoyinc.com">
     <requires>
         <import addon="xbmc.gui" version="5.17.0"/>
         <import addon="script.favourites" version="7.1.1"/>
@@ -28,6 +28,8 @@
             <screenshot>resources/screenshot10.jpg</screenshot>
         </assets>
         <news>
+        1.3 Getting a lot closer, heaps of stuff, seems sort of stable
+        - More rebranding as Zoyinc
         1.00.x Working on a personal skin, "Zoyinc" which is 99.999% Amber with Zoyic tweaks
         - Many thanks to those that created Amber
         3.4.32 (11-01-2022)
