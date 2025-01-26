@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts>
     <shortcut>
-        <defaultID>addons</defaultID>
-        <label>$LOCALIZE[24001]</label>
-        <label2>Common Shortcut</label2>
-        <icon>icons/mainmenu/addons.png</icon>
-        <action>ActivateWindow(1119)</action>
-    </shortcut>
+		<defaultID>pictures</defaultID>
+		<label>$LOCALIZE[1]</label>
+		<label2 />
+		<icon>icons/mainmenu/pictures.png</icon>
+        <thumb />
+		<action>ActivateWindow(pictures,root)</action>
+	</shortcut> 
 	<shortcut>
 		<defaultID>videos</defaultID>
 		<label>$LOCALIZE[3]</label>
@@ -15,9 +16,9 @@
 		<thumb />
 		<action>ActivateWindow(videos,sources://video,return)</action>
 	</shortcut>
-	<shortcut>
+		<shortcut>
 		<defaultID>tv</defaultID>
-        <visible>PVR.HasTVChannels</visible>
+        <!-- <visible>PVR.HasTVChannels</visible> Always show TV menu, don't wait for it to be live - ZoyincTweak -->
         <label>$LOCALIZE[31500]</label>
         <thumb />
 		<label2 />
@@ -32,7 +33,7 @@
 		<thumb />
      	<action>ActivateWindow(videos,videodb://movies/titles/,return)</action>
 		<visible>false</visible>
-	</shortcut>
+	</shortcut>	
 	<shortcut>
 		<defaultID>tvshows</defaultID>
 		<label>$LOCALIZE[20343]</label>
@@ -67,15 +68,7 @@
 		<label2 />
 		<icon>icons/mainmenu/radio.png</icon>
 		<action>ActivateWindow(RadioChannels)</action>
-	</shortcut>
-    <shortcut>
-		<defaultID>pictures</defaultID>
-		<label>$LOCALIZE[1]</label>
-		<label2 />
-		<icon>icons/mainmenu/pictures.png</icon>
-        <thumb />
-		<action>ActivateWindow(pictures,root)</action>
-	</shortcut>    
+	</shortcut>   
 	<shortcut>
 		<defaultID>games</defaultID>
 		<label>$LOCALIZE[15016]</label>
@@ -119,6 +112,13 @@
 		<action>ActivateWindow(weather)</action>
 		<visible>false</visible>
 	</shortcut>
+    <shortcut>
+        <defaultID>addons</defaultID>
+        <label>$LOCALIZE[24001]</label>
+        <label2>Common Shortcut</label2>
+        <icon>icons/mainmenu/addons.png</icon>
+        <action>ActivateWindow(1119)</action>
+    </shortcut>	
 	<shortcut>
 		<defaultID>settings</defaultID>
 		<label>$LOCALIZE[5]</label>
