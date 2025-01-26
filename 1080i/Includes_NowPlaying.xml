@@ -168,14 +168,14 @@
 		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(musicvideos) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value condition="!VideoPlayer.Content(livetv) + VideoPlayer.Content(musicvideos) + !String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value condition="![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
-		<value>special://skin/backgrounds/Zoyinc_Default.jpg</value>
+		<value>special://skin/backgrounds/Zoyinc_Sub_Default_Original.jpg</value>
 	</variable>
 
     <variable name="NowPlayingAudioFanartVar">
 		<value condition="Skin.HasSetting(NowPlaying.ArtistSlideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="!String.IsEmpty(Control.GetLabel(4443))">$INFO[Control.GetLabel(4443)]</value>
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
-		<value>special://skin/backgrounds/Zoyinc_Default.jpg</value>
+		<value>special://skin/backgrounds/Zoyinc_Sub_Default_Original.jpg</value>
     </variable>	
 	
 	<constant name="TextureFadeTime">480</constant>

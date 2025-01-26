@@ -1520,7 +1520,7 @@
 	<variable name="MusicNonASFanart">
 	    <value condition="!String.IsEmpty(Player.Art(artist.fanart))">$INFO[Player.Art(artist.fanart)]</value>
 		<value condition="!String.IsEmpty(Skin.String(Default.Background))">$INFO[Skin.String(Default.Background)]</value>
-        <value>special://skin/backgrounds/Default.jpg</value>
+        <value>special://skin/backgrounds/Zoyinc_Sub_Default_Original.jpg</value>
 	</variable>
 	
 	<variable name="LongLabelScroll">
