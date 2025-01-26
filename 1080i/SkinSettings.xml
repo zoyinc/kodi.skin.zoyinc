@@ -1656,13 +1656,6 @@
 						<onclick condition="!System.HasAddon(script.favourites)">InstallAddon(script.favourites)</onclick>
 						<selected>System.AddonIsEnabled(script.favourites)</selected>
 					</control>
-					<control type="radiobutton" id="911203">
-						<label>resource.uisounds.amber</label>
-						<label2>$INFO[System.AddonVersion(resource.uisounds.amber)]             </label2>
-						<onclick condition="System.HasAddon(resource.uisounds.amber) + !System.AddonIsEnabled(resource.uisounds.amber)">EnableAddon(resource.uisounds.amber)</onclick>
-						<onclick condition="!System.HasAddon(resource.uisounds.amber)">InstallAddon(resource.uisounds.amber)</onclick>
-						<selected>System.AddonIsEnabled(resource.uisounds.amber)</selected>
-					</control>
 					<control type="radiobutton" id="911204">
 						<label>script.skinshortcuts</label>
 						<label2>$INFO[System.AddonVersion(script.skinshortcuts)]             </label2>
